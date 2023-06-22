@@ -35,7 +35,7 @@ public class VoterServiceImplTest {
 	@Autowired
 	VoterService voterService;
 	
-	private final Logger mylogs = LoggerFactory.getLogger(this.getClass());
+	
 	
 	@Test
 
