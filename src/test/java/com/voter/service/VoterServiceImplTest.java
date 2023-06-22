@@ -37,39 +37,21 @@ public class VoterServiceImplTest {
 	
 	
 	
-	// @Test
-
- //      void createVoter() throws NullValueFoundException{
+	@Test
+	void createVoter() throws NullValueFoundException{
+		Voter sampleInput = new Voter(8,"haseena","male", 15, 90876435, "haseena","haseen4");
+		Voter expectedOutput = new Voter(8,"haseena","male", 18, 90879365, "haseen","has98");
 		
-		 
-	// 	Voter sampleInput = new Voter(8,"haseena","male", 15, 90876435, "haseena","haseen4");
-	// 	Voter expectedOutput = new Voter(8,"haseena","male", 18, 90879365, "haseen","has98");
-		
-	// 	VoterService voterService = mock(VoterService.class);
- //        when(voterService.createVoter(sampleInput)).thenReturn(expectedOutput);
+		VoterService voterService = mock(VoterService.class);
+        when(voterService.createVoter(sampleInput)).thenReturn(expectedOutput);
 
- //        // Act
- //        Voter actualOutput = voterService.createVoter(sampleInput);
+        // Act
+        Voter actualOutput = voterService.createVoter(sampleInput);
 
- //        // Assert
- //        assertEquals(expectedOutput, actualOutput);
-	// }
-	 @Test
-void createVoter() throws NullValueFoundException{
- Voter voter = new Voter();
-   voter.setAge(18);
-          voter.setName("haseena");
-       voter.setGender("male");
-	voter.setPhoneNumber(56743865);
-         voter.setUserName("mario");
-         voter.setPassWord("js123");
-
- Voter createVoter = voterService.createVoter(voter);
-
-   assertNotNull(createVoter);
-
-  }
-}
+        // Assert
+        assertEquals(expectedOutput, actualOutput);
+	}
+	
 
 
 	@Test
